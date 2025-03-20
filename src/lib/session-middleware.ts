@@ -7,9 +7,7 @@ import {
   Models,
   Storage,
   type Account as AccountType,
-  type Client as ClientType,
   type Databases as DatabasesType,
-  type Models as ModelsType,
   type Storage as StorageType,
   type Users as UsersType,
 } from 'node-appwrite'

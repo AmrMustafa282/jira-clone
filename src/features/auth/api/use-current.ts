@@ -8,7 +8,8 @@ export const useCurrent = () => {
     queryFn: async () => {
       const response = await client.api.auth.current.$get()
       if (!response.ok) return null
-      return await response.json()
+      const { data } = await response.json()
+      return data
     },
   })
 }
