@@ -19,7 +19,7 @@ import { AUTH_COOKIE } from '@/features/auth/constants'
 type AdditionalContext = {
   Variables: {
     account: AccountType
-    database: DatabasesType
+    databases: DatabasesType
     storage: StorageType
     users: UsersType
     user: Models.User<Models.Preferences>
@@ -41,13 +41,13 @@ export const sessionMiddleware = createMiddleware<AdditionalContext>(
     client.setSession(session)
 
     const account = new Account(client)
-    const database = new Databases(client)
+    const databases = new Databases(client)
     const storage = new Storage(client)
 
     const user = await account.get()
 
     c.set('account', account)
-    c.set('database', database)
+    c.set('databases', databases)
     c.set('storage', storage)
     c.set('user', user)
 

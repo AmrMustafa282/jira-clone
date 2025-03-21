@@ -14,7 +14,7 @@ const MobileSidebar = () => {
 
   useEffect(() => {
     setIsOpen(false)
-  }, [pathname]);
+  }, [pathname])
 
   return (
     <Sheet modal={false} open={isOpen} onOpenChange={setIsOpen}>
